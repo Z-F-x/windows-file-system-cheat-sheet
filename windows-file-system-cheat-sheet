@@ -1,0 +1,14 @@
+# Windows File System Cheat Sheet
+
+## AppData
+```%APPDATA%```
+
+## Startup apps directory
+```%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup```
+
+## Local 
+## AppData
+```%APPDATA%\Roaming\Local``` will resolve to something like C:\Users\YourUserName\AppData\Roaming\local
+ 
+## PowerShell config file path location
+C:\Users\YourUserName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
