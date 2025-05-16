@@ -1,4 +1,4 @@
-# Windows File System Cheat Sheet
+# 🗂 Windows File System Cheat Sheet
 
 ## AppData
 ```%APPDATA%```
@@ -12,3 +12,149 @@
  
 ## PowerShell config file path location
 C:\Users\YourUserName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+## 🧍 User-Specific Paths
+
+| Variable             | Path                                                   |
+|----------------------|--------------------------------------------------------|
+| `%APPDATA%`          | `C:\Users\YourName\AppData\Roaming`                   |
+| `%LOCALAPPDATA%`     | `C:\Users\YourName\AppData\Local`                     |
+| `%PROGRAMDATA%`      | `C:\ProgramData` (shared across users)                |
+
+---
+
+## 🚀 Startup Folder (Autostart)
+
+| Description               | Path                                                                 |
+|---------------------------|----------------------------------------------------------------------|
+| User Startup              | `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`            |
+| Shell Shortcut            | `shell:startup`                                                      |
+| Common Startup (All users)| `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`       |
+| Shell Shortcut            | `shell:common startup`                                               |
+
+---
+
+## 📥 Downloads, Documents, Pictures
+
+| Folder       | Path                          |
+|--------------|-------------------------------|
+| Downloads    | `%USERPROFILE%\Downloads`     |
+| Documents    | `%USERPROFILE%\Documents`     |
+| Pictures     | `%USERPROFILE%\Pictures`      |
+
+---
+
+## ⚙️ Shell Folder Shortcuts (Run via Win + R)
+
+| Shell Command             | Description                        |
+|---------------------------|------------------------------------|
+| `shell:startup`           | User startup folder                |
+| `shell:common startup`    | All users' startup folder          |
+| `shell:sendto`            | Explorer "Send To" folder          |
+| `shell:recent`            | Recent files                       |
+| `shell:desktop`           | User Desktop                       |
+| `shell:common desktop`    | All users Desktop                  |
+| `shell:appdata`           | Same as `%APPDATA%`                |
+| `shell:local appdata`     | Same as `%LOCALAPPDATA%`           |
+| `shell:programs`          | Start Menu programs folder         |
+
+---
+
+## 🛠 PowerShell & Terminal Configuration
+
+### PowerShell Profile Path
+
+| Variable       | Typical Path (Windows PowerShell 5.x)                                 |
+|----------------|------------------------------------------------------------------------|
+| `$PROFILE`      | `C:\Users\YourName\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` |
+| Legacy (5.x)    | `C:\Users\YourName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` |
+
+### Windows Terminal
+
+| Description                     | Path                                                              |
+|----------------------------------|-------------------------------------------------------------------|
+| Windows Terminal Settings       | `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json` |
+| Terminal Profiles               | `%USERPROFILE%\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState` |
+
+---
+
+## 🧱 Visual Studio Code Config
+
+| File                 | Path                                     |
+|----------------------|------------------------------------------|
+| VS Code Settings     | `%APPDATA%\Code\User\settings.json`      |
+| VS Code Keybindings  | `%APPDATA%\Code\User\keybindings.json`   |
+
+---
+
+## 🧾 Git Configuration
+
+| Config Type          | Path                          |
+|----------------------|-------------------------------|
+| Global Config        | `%USERPROFILE%\.gitconfig`    |
+| Repo-specific Config | `<repo>\.git\config`          |
+
+---
+
+## 🔐 SSH Keys
+
+| File          | Path                          |
+|---------------|-------------------------------|
+| Private Key   | `%USERPROFILE%\.ssh\id_rsa`   |
+| SSH Config    | `%USERPROFILE%\.ssh\config`   |
+
+---
+
+## 📦 NPM & Node.js
+
+| Description            | Path                                  |
+|------------------------|---------------------------------------|
+| Global Modules         | `%APPDATA%\npm\node_modules`          |
+| Global NPM Config      | `%APPDATA%\npmrc`                     |
+| User NPM Config        | `%USERPROFILE%\.npmrc`                |
+
+---
+
+## 💻 VS Code Extensions
+
+| Description         | Path                                 |
+|---------------------|--------------------------------------|
+| Extensions Folder   | `%USERPROFILE%\.vscode\extensions`   |
+
+---
+
+## 🧰 .NET Global Tools
+
+| Description         | Path                                |
+|---------------------|-------------------------------------|
+| .NET Tools          | `%USERPROFILE%\.dotnet\tools`       |
+
+---
+
+## 📂 Miscellaneous
+
+### Temp Folders
+
+| Variable       | Path                      |
+|----------------|---------------------------|
+| `%TEMP%`       | (resolves to user's temp) |
+| `%TMP%`        | (resolves to user's temp) |
+| System Temp    | `C:\Windows\Temp`         |
+
+### Hosts File
+
+| Description   | Path                                          |
+|---------------|-----------------------------------------------|
+| Hosts File    | `C:\Windows\System32\drivers\etc\hosts`       |
+
+---
+
+## 👨‍💻 Developer Cheat Notes to Add
+
+| Variable                  | Path                                      |
+|---------------------------|-------------------------------------------|
+| `%ProgramFiles%`          | `C:\Program Files`                        |
+| `%CommonProgramFiles%`    | `C:\Program Files\Common Files`          |
+| `%SystemRoot%`            | Usually `C:\Windows`                     |
+| `%ComSpec%`               | `C:\Windows\System32\cmd.exe`           |
+| `%WINDIR%`                | `C:\Windows`                             |
